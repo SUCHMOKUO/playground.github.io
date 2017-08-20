@@ -17,7 +17,7 @@ function refreshProjectList(page, callback) {
     let i = startIndex;
     for (; i < startIndex + 11; i ++) {
         f.insertTo($main, `
-        <a class="project" href="${projects[i].folder}/index.html">
+        <a class="project" href="./${projects[i].folder}/index.html">
             <h2>${projects[i].title}</h2>
             <p>
                 <i class="fa fa-file-text-o"></i>
