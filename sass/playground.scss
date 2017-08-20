@@ -174,9 +174,6 @@ main {
     #scrollDownBtn {
         font-size: 400%;
     }
-    #mainPage {
-        height: auto;
-    }
     main{
         @include wh(100%, 100%);
         flex: {
