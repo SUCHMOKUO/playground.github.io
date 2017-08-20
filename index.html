@@ -333,9 +333,9 @@
         window.onload = function () {
             var preloader = document.getElementById('preloader');
             preloader.classList.add('fadeOut');
-            setTimeout(() => {
+            preloader.addEventListener('transitionend', function () {
                 document.body.removeChild(preloader);
-            }, 500);
+            });
         }
     </script>
 </head>
