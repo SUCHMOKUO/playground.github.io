@@ -27,7 +27,7 @@ button {
 body {
     @include wh(100%, 100vh);
     background: {
-        image: url('/img/blue-grey-pentagonal-background.png');
+        image: url('img/blue-grey-pentagonal-background.png');
         size: cover;
         repeat: no-repeat;
         attachment: fixed;
