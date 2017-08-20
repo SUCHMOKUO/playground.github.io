@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rocket Design - Mobile Web Design Services</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<link href="./css/font-awesome.min.css" rel="stylesheet" />
+	<link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
+</head>
+
+<body>
+	<header>
+		<a id="logo" href="./index.html"></a>
+		<nav>
+			<button id="nav-btn">
+					<img src="./img/nav.png" alt="">
+			</button>
+			<ul id="menu" class="menu-on-hide">
+				<li><a href="./index.html" class="current">Home</a></li>
+				<li><a href="#">Skills</a></li>
+				<li><a href="#">Protfolio</a></li>
+				<li><a href="#">OurTeam</a></li>
+				<li><a href="https://www.baidu.com">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+<!-- End Header -->
+	<section class="banner">
+		<div class="banner-inner-wrapper">
+			<img src="./img/rocket_design.png" alt="">
+		</div>
+	</section>
+<!-- End Banner -->
+	<main>
+		<section class="wrapper-4">
+			<section class="one-of-four" id="html">
+				<i class="fa fa-html5"></i>
+				<h3>HTML</h3>
+			</section>
+			<section class="one-of-four" id="css">
+				<i class="fa fa-css3"></i>
+				<h3>CSS</h3>
+			</section>
+			<section class="one-of-four" id="seo">
+				<i class="fa fa-search"></i>
+				<h3>SEO</h3>
+			</section>
+			<section class="one-of-four" id="social">
+					<i class="fa fa-users"></i>
+				<h3>SOCIAL</h3>
+			</section>
+		</section>
+<!-- End one-of-four -->
+		<section class="wrapper-2" id="tablet">
+			<div class="one-of-two-left">
+				<img src="./img/hand_ipad.png" alt="">
+			</div>
+			<article class="one-of-two-right">
+				<h2>MOBILE. TABLET. DESKTOP</h2>
+				<p>The Rocket Design website is an HTML5 and CSS3 responsive website that has a drop down navigation. This template uses
+					Google Fonts in the CSS to give the text specific styles and a plugin called ‘Font Awesome’ to display the icons found
+					in the main section of the website as well as the footer for the social media icons.</p>
+			</article>
+		</section>
+		<section class="wrapper-2" id="mobile">
+			<article class="one-of-two-left">
+				<h2>ACROSS EACH DEVICE</h2>
+				<p>The Rocket Design website is an HTML5 and CSS3 responsive website that has a drop down navigation. This template uses
+					Google Fonts in the CSS to give the text specific styles and a plugin called ‘Font Awesome’ to display the icons found
+					in the main section of the website as well as the footer for the social media icons.</p>
+			</article>
+			<div class="one-of-two-right">
+				<img src="./img/hand_mobile.png" alt="" id="hand-mobile">
+			</div>
+		</section>
+		<section class="wrapper-2" id="desktop">
+			<div class="one-of-two-left">
+				<img src="./img/desktop.png" alt="">
+			</div>
+			<article class="one-of-two-right">
+				<p>The Rocket Design website is an HTML5 and CSS3 responsive website that has a drop down navigation. This template uses
+					Google Fonts in the CSS to give the text specific styles and a plugin called ‘Font Awesome’ to display the icons found
+					in the main section of the website as well as the footer for the social media icons.</p>
+			</article>
+		</section>
+<!-- End wrapper-2 -->
+		<section class="wrapper-3">
+			<article class="one-of-three">
+				<h3>GOOGLE SEARCH</h3>
+				<p>The Rocket Design website is an HTML5 and CSS3 responsive website that has a drop down navigation. This template uses
+						Google Fonts in the CSS bsite as well as the footer for the social media icons.</p>
+			</article>
+			<article class="one-of-three">
+				<h3>MARKETING</h3>
+				<p>The Rocket Design website is ate as well as the footer for the social media icons.</p>
+			</article>
+			<article class="one-of-three">
+				<h3>HAPPY CUSTOMERS</h3>
+				<p>The Rocket Design website is an HTML5 atext specific styles and a plugin called ‘Font Awesome’ to display the icons found
+				</p>
+			</article>
+		</section>
+<!-- End wrapper-3 -->
+		<section id="smile">
+			<h2>: )</h2>
+		</section>
+<!-- End Smile Face -->
+	</main>
+	<footer>
+		<ul>
+			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+			<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+		</ul>
+	</footer>
+<!-- End first footer -->
+	<footer class="second-footer">
+		<p>&copy; Rocket Design</p>
+	</footer>
+<!-- End second footer -->
+
+
+<script>
+	var nav_btn = document.querySelector('#nav-btn');
+	var menu = document.querySelector('#menu');
+	nav_btn.onclick = function () {
+		if (menu.classList.contains('menu-on-show')) {
+			menu.classList.remove('menu-on-show');
+			menu.classList.add('menu-on-hide');
+		} else {
+			menu.classList.remove('menu-on-hide');
+			menu.classList.add('menu-on-show');
+		}
+	}
+</script>
+</body>
+
+</html>

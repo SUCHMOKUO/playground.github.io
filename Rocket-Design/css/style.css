@@ -1,0 +1,266 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+li {
+    list-style: none;
+    display: inline-block;
+}
+body {
+    background-color: #f5f5f5;
+    color: #67727a;
+    font-family: 'Alegreya', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+h2 {
+    font-size: 250%;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 3%;
+}
+h3 {
+    font-size: 175%;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 3%;
+}
+p {
+    font-family: 'Alegreya sans', sans-serif;
+    font-size: 160%;
+    line-height: 150%;
+    padding: 3%;
+    text-indent: 2em;
+    text-align: justify;
+}
+a, p, h2, h3 {
+    text-shadow: 1px 1px 3px #888888;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #6991ac;
+}
+nav button {
+    display: none;
+}
+nav {
+    overflow: auto;
+}
+#logo {
+    display: inline-block;
+    float: left;
+    background: url('../img/RD.png') no-repeat center;
+    width: 200px;
+    height: 80px;
+}
+#menu {
+    float: right;
+}
+#menu li {
+    line-height: 80px;
+    margin-right: 20px;
+    font-size: 120%;
+    font-weight: 500;
+}
+#menu a {
+    color: #f5f5f5;
+}
+#menu a:hover {
+    color: #c3d7df;
+}
+.current {
+    border-bottom: 2px solid #c3d7df;
+    color: #c3d7df;
+}
+.banner {
+    width: 100%;
+    background-color: #6991ac;
+}
+.banner-inner-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.wrapper-4, .wrapper-2, .wrapper-3 {
+    width: 100%;
+    overflow: auto;
+    clear: both;
+    position: relative;
+}
+.one-of-four {
+    float: left;
+    width: 25%;
+    padding: 3% 0; 
+}
+.one-of-four i {
+    font-size: 500%;
+    text-align: center;
+    width: 100%;
+}
+#html {
+    background-color: #f1aa90;
+}
+#css {
+    background-color: #beb9ad;
+}
+#seo {
+    background-color: #aadcd2;
+}
+#social {
+    background-color: #a2b2c1;
+}
+.wrapper-2 {
+    background-color: #c3d7df;
+    color: #f5f5f5;
+}
+.wrapper-3 {
+    color: #f5f5f5;
+}
+.one-of-two-left {
+    width: 50%;
+    float: left;
+}
+#tablet article {
+    background-color: #a2b1c1;
+}
+#mobile article {
+    background-color: #beb9ad;
+}
+#desktop article {
+    background-color: #f1aa90;
+}
+.one-of-two-right {
+    width: 50%;
+    float: right;
+}
+.one-of-three {
+    width: 33.33%;
+    float: left;
+}
+.one-of-three:nth-child(1) {
+    background-color: #a2b2c1;
+}
+.one-of-three:nth-child(2) {
+    background-color: #beb9ad;
+    position: absolute;
+    bottom: 0; top: 0; left: 33.33%;
+}
+.one-of-three:nth-child(3) {
+    background-color: #aadcd2;
+    position: absolute;
+    bottom: 0; top: 0; right: 0;
+}
+#smile {
+    clear: both;
+    width: 100%;
+    background-color: #aadcd2;
+}
+#smile h2 {
+    padding: 1%;
+}
+footer {
+    text-align: center;
+    background-color: #6991ac;
+}
+footer li {
+    font-size: 500%;
+    margin: 5%;
+}
+footer a:hover {
+    color: #f5f5f5;
+}
+footer a {
+    color: #c3d7df;
+}
+.second-footer {
+    border-top: 2px solid #aadcd2;
+    background-color: #544b59;
+    max-height: 80px;
+}
+.second-footer p {
+    text-align: center;
+    color: #f5f5f5;
+    padding: 10px 0;
+    margin-right: 43px;
+}
+
+/*------- Media ----------*/
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 150%;
+        font-weight: 500;
+    }
+    h3 {
+        font-size: 130%;
+        font-weight: 400;
+    }
+    p {
+        font-size: 120%;
+    }
+    #logo {
+        background: url('../img/RD_mobile.png') no-repeat center;
+        width: 100px;
+        height: 50px;
+        margin: 15px 10px;
+    }
+    nav button {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        background-color: transparent;
+        float: right;
+    }
+    #menu {
+        position: absolute;
+        left: 0; right: 0;
+        background-color: #6991ac;
+        border-bottom: 2px solid #67727a;
+        transition: top 500ms;
+        z-index: 10;
+    }
+    header a, header button {
+        z-index: 20;
+        position: relative;
+    }
+    .menu-on-show {
+        top: 80px;
+    }
+    .menu-on-hide {
+        top: -400px;
+    }
+    #menu li {
+        display: block;
+        text-align: center;
+        border-top: 2px solid #67727a;
+        width: 80%;
+        line-height: 55px;
+        margin: 0 auto;
+    }
+    .one-of-four, .one-of-three, .one-of-two-left, .one-of-two-right {
+        width: 100%;
+    }
+    .one-of-four {
+        padding: 7% 0;
+    }
+    .one-of-three:nth-child(2) {
+        position: static;
+    }
+    .one-of-three:nth-child(3) {
+        position: static;
+    }
+    #hand-mobile {
+        display: none;
+    }
+    footer li {
+        font-size: 200%;
+        margin: 5%;
+    }
+}

@@ -1,0 +1,18 @@
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+@mixin x-center {
+    margin: 0 auto;
+}
+@mixin ab-center {
+    margin: auto;  
+    position: absolute;  
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+@mixin trans-center {
+    position: relative;
+    top: 50%; left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+}
