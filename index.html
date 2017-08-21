@@ -15,7 +15,7 @@
         #preloader {
             width: 100%;
             height: 100vh;
-            background-color: #4f6e7b;
+            background-color: rgb(79, 110, 123);
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -25,11 +25,15 @@
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center;
-            -webkit-transition: opacity 1.5s ease;
-            transition: opacity 500ms ease;
         }
         .fadeOut {
             opacity: 0;
+            transition: opacity 1.5s ease;
+            -webkit-transition: opacity 1.5s ease;
+        }
+        .bounceOutUp {
+            animation: bounceOutUp 1.5s ease;
+            -webkit-animation: bounceOutUp 1.5s ease;
         }
         /*!
         * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
@@ -328,10 +332,44 @@
                         transform: translateY(-50%);
             }
         }
+        @-webkit-keyframes bounceOutUp{
+        20% {
+            -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+        }
+        40%, 45% {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 20px, 0);
+            transform: translate3d(0, 20px, 0);
+        }
+        to {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
+        }
+    }
+    @keyframes bounceOutUp{
+        20% {
+            -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+        }
+        40%, 45% {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 20px, 0);
+            transform: translate3d(0, 20px, 0);
+        }
+        to {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
+        }
+    }  
     </style>
     <script>
         window.onload = function () {
             var preloader = document.getElementById('preloader');
+            var pacman = document.getElementById('pacman');
+            pacman.classList.add('bounceOutUp');
             preloader.classList.add('fadeOut');
             preloader.addEventListener('transitionend', function () {
                 document.body.removeChild(preloader);
@@ -342,7 +380,7 @@
 <body>
     <!-- Preloader -->
     <div id="preloader">
-        <div style="color: #f5f5f5" class="la-pacman la-3x">
+        <div style="color: #f5f5f5" class="la-pacman la-3x" id="pacman">
             <div></div>
             <div></div>
             <div></div>

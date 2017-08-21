@@ -68,8 +68,10 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     header {
-        -webkit-animation: fadeInUp 1.5s ease;
-                animation: fadeInUp 1.5s ease;
+        -webkit-animation: fadeInUp 1s ease;
+                animation: fadeInUp 1s ease;
+                -webkit-animation-delay: 1.5s;
+                        animation-delay: 1.5s;
         width: 100%;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -88,14 +90,18 @@ body {
 }
 #scrollDownBtn {
     font-size: 500%;
-    -webkit-animation: fadeInUp 4s ease, upAndDown 4s ease infinite;
-            animation: fadeInUp 4s ease, upAndDown 4s ease infinite;
+    -webkit-animation: fadeInUp 3s ease, upAndDown 4s ease infinite;
+            animation: fadeInUp 3s ease, upAndDown 4s ease infinite;
+            -webkit-animation-delay: 1.5s;
+                    animation-delay: 1.5s;
 }
 .underline {
     @include wh(80%, 2px);
     background-color: $white;
-    -webkit-animation: zoomIn 2s ease;
-            animation: zoomIn 2s ease;
+    -webkit-animation: zoomIn 1.5s ease;
+            animation: zoomIn 1.5s ease;
+            -webkit-animation-delay: 1.5s;
+                    animation-delay: 1.5s;
 }
 #mainPage {
     display: -webkit-box;
