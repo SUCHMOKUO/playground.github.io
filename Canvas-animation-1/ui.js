@@ -12,7 +12,6 @@ const mouse = {             // Mouse position now
 };
 
 const maxR = 80;            // Max radius of the circles                            (px)
-const minR = 20;            // Min radius of the circles                            (px)
 const circleNum = 100;      // Number of circles in the canvas
 const moveSpeed = 1;        // Speed of the circles                                 (Int)
 const incSpeed = 4;         // Increasement of the circles'radius everytime         (px)
@@ -31,6 +30,7 @@ class Circle {
         this.x = x;
         this.y = y;
         this.r = r;
+        this.originR = r;
         this.dx = dx;
         this.dy = dy;
         this.color = color;
@@ -49,7 +49,7 @@ class Circle {
         (Math.abs(mouse.x - this.x) < range) &&
         (Math.abs(mouse.y - this.y) < range) ?
         (this.r < maxR) ? this.r += incSpeed : doNoting() :     // When in the mouse area, judge and increase radius
-        (this.r > minR) ? this.r -= incSpeed : doNoting();      // When out of the mouse area, judge and decrease the radius
+        (this.r > this.originR) ? this.r -= incSpeed : doNoting();      // When out of the mouse area, judge and decrease the radius
 
         // When at the edge, go back
         this.dx = (this.x + this.r) >= canvas.width ||
@@ -73,7 +73,7 @@ class Circle {
 for (let i = 0; i < circleNum; i ++) {
     let x = Math.random() * canvas.width;
     let y = Math.random() * canvas.height;
-    const r = parseInt(minR * Math.random());
+    const r = parseInt(20 * Math.random());
     const dx = (Math.random() - 0.5) * moveSpeed;
     const dy = (Math.random() - 0.5) * moveSpeed;
     const color = colorArr[parseInt(Math.random() * 40)];
