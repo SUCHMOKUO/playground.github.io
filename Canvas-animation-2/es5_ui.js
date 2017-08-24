@@ -12,7 +12,7 @@ canvas.height = innerHeight - 10;
 
 var circleNum = 100; // Number of circles in the canvas
 var moveSpeed = 1; // (Int) Speed of the circles                                 
-var frictionX = 0.99; // The dx will change to 'frictionX' times of it's last loop
+var frictionX = 0.999; // The dx will change to 'frictionX' times of it's last loop
 var frictionY = 0.9; // The dy will change to 'frictionY' times of itself every impact
 var gravity = 0.1; // The dy will add 'gravity' every loop
 var colorArr = ['rgb(254, 67, 101)', 'rgb(252, 157, 154)', 'rgb(249, 205, 173)', 'rgb(200, 200, 169)', 'rgb(131, 175, 155)'];
@@ -46,13 +46,13 @@ var Circle = function () {
             var _this = this;
 
             // When dx is small enough, stop calculate
-            this.dx = Math.abs(this.dx) < 1e-4 || this.dx === 0 ? 0 :
+            this.dx = Math.abs(this.dx) < 1e-10 || this.dx === 0 ? 0 :
             // When at the edge, go back
             this.x + this.r >= canvas.width || this.x - this.r <= 0 ? -this.dx * frictionX : this.dx * frictionX;
             // When at the bottom, stop
             this.y + this.r >= canvas.height && (
             // When dy is small enough, stop calculate
-            Math.abs(this.dy) < 1e-4 || this.dy === 0) ? this.dy = 0 : function () {
+            Math.abs(this.dy) < 1e-10 || this.dy === 0) ? this.dy = 0 : function () {
                 // When at the edge, go back
                 _this.y + _this.r >= canvas.height ? _this.dy = -_this.dy * frictionY : _this.dy += gravity;
 
