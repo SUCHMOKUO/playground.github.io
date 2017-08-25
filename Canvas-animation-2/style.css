@@ -19,6 +19,7 @@ body{
         -ms-flex-pack: center;
             justify-content: center;
     background-color: #eeeeee;
+    overflow: hidden;
 }
 #canvas {
     border: 2px solid rgb(131, 175, 155);
